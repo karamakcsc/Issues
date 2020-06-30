@@ -1,2 +1,5 @@
+https://stackoverflow.com/questions/17404316/the-following-untracked-working-tree-files-would-be-overwritten-by-merge-but-i
+
+
 git fetch --all
 git reset --hard origin/{{your branch name}}
