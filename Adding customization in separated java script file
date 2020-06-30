@@ -1,0 +1,25 @@
+https://discuss.erpnext.com/t/adding-customization-in-separated-java-script-file/41811
+
+
+Hey ,
+If you want to customize the sales invoice doctype. You need to follow these steps
+
+    Inside frappe-bench/apps/[app_name]/[app_name] here you can create a folder of Custom
+
+    Inside custom folder, Create a folder of sale invoice and then you need to create the files sales_invoice.js, sales_invoice.py and init.py file
+
+    Andyou can do customization over here.
+
+    Apart from this, you have to add these in hooks.py
+
+For JS File
+doctype_js = {
+“sales_invoice” : “custom/sales_invoice/sales_invoice.js”,
+}
+
+For PY file
+doc_events ={
+“sales_invoice”:{
+“validate”:"project_name.custom.sales_invoice.sales_invoice.validate_project”
+}
+}
