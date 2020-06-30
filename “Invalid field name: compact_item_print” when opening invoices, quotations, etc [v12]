@@ -1,0 +1,3 @@
+https://discuss.erpnext.com/t/invalid-field-name-compact-item-print-when-opening-invoices-quotations-etc-v12/51205
+
+in print settings doctype creat a new custom field with same name “compact_item_print” and make its type as check
