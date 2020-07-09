@@ -1,0 +1,7 @@
+frappe.ui.form.on('Material Request', {
+    validate: function(frm) {
+        $.each(frm.doc.items, function(i, d) {
+            d.cost_center = frm.doc.center;
+        });
+    } 
+})
