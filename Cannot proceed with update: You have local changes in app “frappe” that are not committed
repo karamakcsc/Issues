@@ -1,0 +1,11 @@
+in apps/frappe
+
+git stash (it will says No local changes to save)
+git reset --hard
+git pull --rebase
+git stash
+git add . (Including point)
+
+in frappe-bench
+
+bench update
