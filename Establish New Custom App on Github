@@ -1,0 +1,3 @@
+git init upstream
+cd apps/[app_name]
+git remote add origin https://github.com/[username]/[app_name]
