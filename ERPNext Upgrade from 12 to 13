@@ -1,0 +1,37 @@
+# update
+cd ~/frappe-bench
+bench update
+ 
+# update to major release ex. v12 --> v13
+# nodejs >= 10 required
+cd ~
+curl -sL https://deb.nodesource.com/setup_10.x -o nodesource_setup.sh
+sudo bash nodesource_setup.sh
+sudo apt install nodejs
+nodejs -v
+ 
+# now upgrade
+cd ~/frappe-bench
+bench switch-to-branch version-13-beta frappe erpnext --upgrade
+bench update --patch
+bench migrate
+bench update --build
+
+
+
+
+In Case Error utf-8
+
+Install Python 3.6+
+
+bench migrate-env python3
+
+
+
+
+
+
+
+
+
+
