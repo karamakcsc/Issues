@@ -1,1 +1,8 @@
 https://github.com/frappe/erpnext/issues/25182
+
+
+bench --site <sitename> console
+
+frappe.reload_doc('accounts', 'doctype', 'pos_invoice')
+frappe.reload_doc('accounts', 'doctype', 'pos_invoice_item')
+exit
