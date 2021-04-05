@@ -1,0 +1,37 @@
+https://superuser.com/questions/734880/hyper-v-clipboard-and-integration-services-in-ubuntu
+
+
+
+
+    Modify Ubuntu 18.04 to use xrdp
+
+    1.1 Get the scripts from GitHub
+
+    sudo apt-get update
+    sudo add-apt-repository ppa:git-core/ppa
+    sudo apt update; sudo apt install git
+    git clone https://github.com/jterry75/xrdp-init.git ~/xrdp-init
+
+    1.2 Make the scripts executable and run them...
+
+    cd ~/xrdp-init/ubuntu/18.04/
+    sudo chmod +x install.sh
+    sudo ./install.sh
+    reboot
+
+    1.3 <After Reboot> Run script again to finish setting up VM
+
+    cd ~/xrdp-init/ubuntu/18.04/
+    sudo ./install.sh
+
+    Shutdown Ubuntu VM
+
+    Register Ubuntu Session ~ run this command on host PC using powershell with admin rights:
+
+    Set-VM -VMName YourUbuntuVMNameHere -EnhancedSessionTransportType HvSocket
+
+    Restart VM
+
+    Connect/Login to XRDP from Hyper-V (note ~ enter username - must be lowercase)
+
+    Note/Caution ~ if you have problems using drives, then you may want to de-select the [Printers]
