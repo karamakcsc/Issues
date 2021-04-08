@@ -5,4 +5,12 @@ bench --site <sitename> console
 
 frappe.reload_doc('accounts', 'doctype', 'pos_invoice')
 frappe.reload_doc('accounts', 'doctype', 'pos_invoice_item')
+
+exit
+
+
+frappe.reload_doc("healthcare", "doctype", "Inpatient Medication Order")
+frappe.reload_doc("healthcare", "doctype", "Therapy Session")
+frappe.db.commit() # superstition
+
 exit
