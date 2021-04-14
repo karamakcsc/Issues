@@ -12,7 +12,7 @@ nodejs -v
  
 # now upgrade
 cd ~/frappe-bench
-bench switch-to-branch version-13-beta frappe erpnext --upgrade
+bench switch-to-branch version-13 frappe erpnext --upgrade
 bench update --patch
 bench migrate
 bench update --build
