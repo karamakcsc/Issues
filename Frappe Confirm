@@ -1,0 +1,16 @@
+frappe.ui.form.on("Purchase Order", {
+supplier: function(frm) {
+   frappe.confirm(
+                   'Changing Supplier will delete items list, Is this correct?',
+                   function() {
+                       show_alert("hello");
+                   },
+                   function() {
+                     frappe.validated = false;
+                     //frm.doc.supplier = prev_supplier;
+
+                   }
+               )
+
+ }
+});
